@@ -9,7 +9,7 @@
 }
 
 :root {
-    --dark-brown: #3E2723;
+    --dark-brown: #311f1c;
     --orange: #FF9800;
     --orange-hover: #E65100;
     --cream: #FFFDD0;
@@ -21,7 +21,20 @@
 body {
     background-color: var(--white);
     color: var(--text-dark);
+    
+    /* 1. Pehle image lagao */
+   background-image: url('images/back\ image.jpg');
+    
+    /* 2. Height aur Width set karo */
+    width: 180;
+    min-height: 200; /* Is se image poori screen ki height cover kare gi */
+    
+    /* 3. Image ko screen par set karne ke liye ye laazmi lagao */
+    background-size: cover;      /* Is se image khinch kar poori screen par fit ho jaye gi */
+    background-position: center;  /* Image hamesha center me rahe gi */
+    background-repeat: no-repeat; /* Image baar baar repeat nahi hogi */
 }
+
 
 /* ==========================================
    2. HEADER / NAVBAR (Flexbox)
@@ -68,7 +81,7 @@ body {
    3. HERO SECTION (Flexbox)
    ========================================== */
 .hero {
-    background: linear-gradient(rgba(62, 39, 35, 0.85), rgba(62, 39, 35, 0.85));
+    background: linear-gradient(rgba(201, 187, 185, 0.85), rgba(205, 191, 188, 0.85));
     background-color: var(--dark-brown);
     height: 60vh;
     display: flex;
@@ -89,6 +102,7 @@ body {
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: #F5F5F5;
 }
 
 .btn-orange {
@@ -116,7 +130,7 @@ body {
     text-align: center;
     font-size: 32px;
     margin: 50px 0 30px 0;
-    color: var(--dark-brown);
+    color: var(--text-dark);
     position: relative;
 }
 
@@ -128,6 +142,7 @@ body {
     background-color: var(--orange);
     margin: 8px auto 0 auto;
     border-radius: 2px;
+    color: #FF9800;
 }
 
 .intro-section {
@@ -137,6 +152,7 @@ body {
     padding: 0 20px 40px 20px;
     line-height: 1.6;
     font-size: 18px;
+    color: #aec085;
 }
 
 /* ==========================================
