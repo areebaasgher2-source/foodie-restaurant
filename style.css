@@ -1,0 +1,437 @@
+/* ==========================================
+   1. GLOBAL STYLES & VARIABLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --dark-brown: #3E2723;
+    --orange: #FF9800;
+    --orange-hover: #E65100;
+    --cream: #FFFDD0;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --text-dark: #212121;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+/* ==========================================
+   2. HEADER / NAVBAR (Flexbox)
+   ========================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-brown);
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--orange);
+}
+
+/* ==========================================
+   3. HERO SECTION (Flexbox)
+   ========================================== */
+.hero {
+    background: linear-gradient(rgba(62, 39, 35, 0.85), rgba(62, 39, 35, 0.85));
+    background-color: var(--dark-brown);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: var(--cream);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-orange {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-orange:hover {
+    background-color: var(--orange-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   4. INTRO & SECTIONS UNIVERSAL
+   ========================================== */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 50px 0 30px 0;
+    color: var(--dark-brown);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--orange);
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+.intro-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px 40px 20px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* ==========================================
+   5. MENU SECTION & CARDS (Flexbox)
+   ========================================== */
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-card {
+    background-color: var(--white);
+    width: 270px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.food-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--light-gray);
+}
+
+.card-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.food-name {
+    font-size: 20px;
+    color: var(--dark-brown);
+    margin-bottom: 8px;
+}
+
+.food-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-brown);
+}
+
+.btn-sm {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* ==========================================
+   6. SPECIAL OFFER SECTION (Flexbox)
+   ========================================== */
+.special-offer {
+    background-color: var(--cream);
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.offer-text h2 {
+    font-size: 36px;
+    color: var(--dark-brown);
+    margin-bottom: 10px;
+}
+
+.offer-text p {
+    font-size: 18px;
+    color: #5D4037;
+}
+
+/* ==========================================
+   7. CART PAGE LAYOUT (Flexbox)
+   ========================================== */
+.cart-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.cart-items-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.cart-item-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    background-color: var(--light-gray);
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-size: 18px;
+    color: var(--dark-brown);
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.cart-qty {
+    margin: 0 30px;
+    font-size: 16px;
+}
+
+.btn-remove {
+    background: none;
+    border: 1px solid #D32F2F;
+    color: #D32F2F;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-remove:hover {
+    background-color: #D32F2F;
+    color: var(--white);
+}
+
+/* Summary Card */
+.order-summary {
+    flex: 1;
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 5px solid var(--dark-brown);
+}
+
+.summary-title {
+    font-size: 22px;
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+    border-bottom: 2px solid #E0E0E0;
+    padding-bottom: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.summary-total {
+    border-top: 2px dashed #BDBDBD;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-brown);
+}
+
+.btn-checkout {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ==========================================
+   8. FOOTER (Flexbox)
+   ========================================== */
+.footer {
+    background-color: var(--dark-brown);
+    color: var(--cream);
+    padding: 40px 8% 20px 8%;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: var(--orange);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section p, .footer-section li {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,253,208, 0.1);
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* ==========================================
+   9. RESPONSIVE DESIGN (Media Queries)
+   ========================================== */
+@media (max-width: 992px) {
+    .cart-wrapper {
+        flex-direction: column;
+    }
+    .order-summary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-menu {
+        gap: 20px;
+    }
+    .hero h1 {
+        font-size: 34px;
+    }
+    .special-offer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .cart-item-img {
+        margin-right: 0;
+    }
+}
