@@ -14,7 +14,7 @@
     --orange-hover: #E65100;
     --cream: #FFFDD0;
     --white: #FFFFFF;
-    --light-gray: #F5F5F5;
+    --light-gray: #f7f0f0;
     --text-dark: #212121;
 }
 
@@ -81,7 +81,7 @@ body {
    3. HERO SECTION (Flexbox)
    ========================================== */
 .hero {
-    background: linear-gradient(rgba(201, 187, 185, 0.85), rgba(205, 191, 188, 0.85));
+    background: linear-gradient(rgba(228, 139, 125, 0.85), rgba(205, 191, 188, 0.85));
     background-color: var(--dark-brown);
     height: 60vh;
     display: flex;
